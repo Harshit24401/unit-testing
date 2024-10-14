@@ -38,7 +38,7 @@ test("notes are returned as json", async () => {
 test("there are two notes", async () => {
   const response = await api.get("/api/notes");
 
-  assert.strictEqual(response.body.length, 2);
+  assert.strictEqual(response.body.length, initialNotes.length);
 });
 
 test("the first note is about HTTP methods", async () => {
